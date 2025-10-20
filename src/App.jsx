@@ -68,7 +68,7 @@ const App = () => {
           <Route
             path="/protected"
             element={
-              <RequireAuth>
+              <RequireAuth isAuthenticated={isAuthenticated}>
                 <ProtectedPage onLogout={handleLogout} />
               </RequireAuth>
             }
